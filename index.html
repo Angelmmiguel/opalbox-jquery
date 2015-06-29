@@ -58,7 +58,18 @@
 <p>To create OpalBoxes, define an HTML element. Predefined ruby code can be inside of this tags:</p>
 
 <div class="highlight highlight-HTML"><pre>&lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>ruby-code<span class="pl-pds">"</span></span>&gt;
-    return 1
+class Value
+  def initialize(val)
+    @value = val
+  end
+
+  def my_value
+    return @value
+  end
+end
+
+value = Value.new(10)
+value.my_value
 &lt;/<span class="pl-ent">div</span>&gt;</pre></div>
 
 <p>Next call to opalBox in a script:</p>
