@@ -69,8 +69,8 @@ defaults = {
 
 List of available themes:
 
-* Light (by [@laux_es](https://twitter.com/Laux_es))
-* Dark aka Sublime theme (by [@laux_es](https://twitter.com/Laux_es))
+* light - by [@laux_es](https://twitter.com/Laux_es)
+* dark (aka Sublime theme) - by [@laux_es](https://twitter.com/Laux_es)
 
 ## Create a theme
 
