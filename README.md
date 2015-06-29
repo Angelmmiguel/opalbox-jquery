@@ -90,7 +90,7 @@ After install base dependencies, clone the repository and run `npm install` to d
 
 	https://github.com/Angelmmiguel/opalbox-jquery.git
 	cd opalbox-jquery
-	npm install --save-dev
+	npm install
 
 All changes must be performed on `src/sass` and `src/js` folders, because `src/css` and `dist` folders are generated automatically with Gulp.
 
