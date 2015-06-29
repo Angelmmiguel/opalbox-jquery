@@ -118,7 +118,26 @@ defaults <span class="pl-k">=</span> {
 <p>List of available themes:</p>
 
 <ul>
-<li>Light (by <a href="https://twitter.com/Laux_es">@laux_es</a>)</li>
+<li>
+  light (by <a href="https://twitter.com/Laux_es">@laux_es</a>)
+  <div class="light-theme" style="margin: 10px 0 25px 0;">
+def hello
+  return 'hello'
+end
+
+hello
+  </div>
+</li>
+<li>
+  dark (by <a href="https://twitter.com/Laux_es">@laux_es</a>)
+    <div class="dark-theme" style="margin: 10px 0 25px 0;">
+def hello
+  return 'hello'
+end
+
+hello
+  </div>
+</li>
 </ul>
 
 <h2>
@@ -188,7 +207,10 @@ npm install
     </script>
     <script type="text/javascript">
       $(document).ready(function(){
-        $('.ruby-code').opalBox();
+        $('.ruby-code, .light-theme').opalBox();
+        $('.dark-theme').opalBox({
+          theme: 'dark'
+        });
       });
     </script>
 
