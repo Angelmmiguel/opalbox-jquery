@@ -1,0 +1,44 @@
+/*!
+ * Light theme for OpalBox.
+ *
+ * @author Angel M (@laux_es)
+ */
+
+// Base colors
+$border_box: #E1E1E1;
+$header_bg: #F0F0F0;
+$header_text: #575757;
+$code_text: #333333;
+$button_bg: #CC342D;
+$button_text: #fff;
+$result_placeholder: #999999;
+
+// Apply the theme
+.opbox.light {
+  border-color: $border_box;
+
+  // Header
+  .opbox-header {
+    background-color: $header_bg;
+    color: $header_text;
+  }
+
+  // Code
+  .opbox-code {
+    color: $code_text;
+  }
+  
+  // Output
+  .opbox-output {
+    border-top: 1px solid $border_box;
+
+    .opbox-execute .opbox-run {
+      background-color: $button_bg;
+      color: $button_text;
+    }
+    
+    .opbox-result p.empty {
+      color: $result_placeholder;
+    }
+  }
+}

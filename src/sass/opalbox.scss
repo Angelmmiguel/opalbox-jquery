@@ -1,0 +1,67 @@
+/*!
+ * Base CSS styles for the OpalBox. This style is extended with themes. Some
+ * colors like border of the box comes from Light theme.
+ */
+
+// Base
+.opbox {
+  border: 1px solid #e1e1e1;
+  border-radius: 7px;
+  
+  // Header
+  .opbox-header {
+    padding: 10px 15px;
+    border-radius: 7px 7px 0 0;
+  }
+
+  // Code
+  .opbox-code-wrap {
+    height: 120px;
+  }
+
+  .opbox-code {
+    border: none;
+    padding: 10px 15px;
+    resize: none;
+    width: 100%;
+    font-size: 1em;
+    box-sizing: border-box;
+    height: 120px;
+  }
+
+  // Output
+  .opbox-output {
+    border-top: 1px solid #e1e1e1;
+
+    // Run button
+    .opbox-execute {
+      width: 70px;
+      float: left;
+      padding: 10px;
+      text-align: center;
+    
+      .opbox-run {
+        border: none;
+        width: 70px;
+        font-size: 13px;
+        text-align: center;
+        padding: 5px 0;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    }
+
+    // Result
+    .opbox-result {
+      padding: 9px 15px;
+      margin-left: 80px;
+      min-height: 28px;
+      
+      p {
+        margin: 5px 0;
+
+        &.empty { }
+      }
+    }
+  }
+}
