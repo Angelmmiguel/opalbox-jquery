@@ -9,7 +9,7 @@ Now, link it into your website. In `<head>` tag:
 ```HTML
 <!-- Styles --> 
 <link rel="stylesheet" type="text/css" href="<route to opalbox.min.css>" />
-<link rel="stylesheet" type="text/css" href="<route to theme>" />
+<link rel="stylesheet" type="text/css" href="<route to theme or all themes>" />
 ```
 
 Javascript files can be defined on `<head>` tag or at bottom of your website.
@@ -70,6 +70,7 @@ defaults = {
 List of available themes:
 
 * Light (by [@laux_es](https://twitter.com/Laux_es))
+* Dark aka Sublime theme (by [@laux_es](https://twitter.com/Laux_es))
 
 ## Create a theme
 

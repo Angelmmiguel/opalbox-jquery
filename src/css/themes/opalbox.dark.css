@@ -28,29 +28,3 @@
 .opbox.dark .opbox-output .opbox-result p.empty {
   color: #E4E4E4;
 }
-
-/*!
- * Light theme for OpalBox.
- *
- * @author Angel M (@laux_es)
- */
-.opbox.light {
-  border-color: #E1E1E1;
-}
-.opbox.light .opbox-header {
-  background-color: #F0F0F0;
-  color: #575757;
-}
-.opbox.light .opbox-code {
-  color: #333333;
-}
-.opbox.light .opbox-output {
-  border-top: 1px solid #E1E1E1;
-}
-.opbox.light .opbox-output .opbox-execute .opbox-run {
-  background-color: #CC342D;
-  color: #fff;
-}
-.opbox.light .opbox-output .opbox-result p.empty {
-  color: #999999;
-}

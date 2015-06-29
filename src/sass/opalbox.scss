@@ -11,7 +11,7 @@
   // Header
   .opbox-header {
     padding: 10px 15px;
-    border-radius: 7px 7px 0 0;
+    border-radius: 6px 6px 0 0;
   }
 
   // Code
@@ -32,6 +32,7 @@
   // Output
   .opbox-output {
     border-top: 1px solid #e1e1e1;
+    border-radius: 0 0 6px 6px;
 
     // Run button
     .opbox-execute {

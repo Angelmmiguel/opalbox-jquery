@@ -1,0 +1,53 @@
+/*!
+ * Dark theme (aka sublime theme) for OpalBox.
+ *
+ * @author Angel M (@laux_es)
+ */
+
+// Base colors
+$border_box: #474747;
+$header_bg: #4A4A47;
+$header_text: #E6DB74;
+$code_text: #F8F8F2;
+$code_bg: #272822;
+$button_bg: #CC342D;
+$button_text: #fff;
+$result_bg: #272822;
+$result_placeholder: #E4E4E4;
+$result_text: #F8F8F2;
+
+// Apply the theme
+.opbox.dark {
+  border-color: $border-box;
+
+  // Header
+  .opbox-header {
+    background-color: $header_bg;
+    color: $header_text;
+  }
+
+  // Code
+  .opbox-code {
+    color: $code_text;
+    background-color: $code_bg;
+  }
+  
+  // Output
+  .opbox-output {
+    border-top: 1px solid $border_box;
+    background-color: $result_bg;
+
+    .opbox-execute .opbox-run {
+      background-color: $button_bg;
+      color: $button_text;
+    }
+    
+    .opbox-result p {
+      color: $result_text;
+    }
+
+    .opbox-result p.empty {
+      color: $result_placeholder;
+    }
+  }
+}
