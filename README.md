@@ -72,6 +72,8 @@ List of available themes:
 * light - by [@laux_es](https://twitter.com/Laux_es)
 * dark (aka Sublime theme) - by [@laux_es](https://twitter.com/Laux_es)
 
+Show them in action at: [Themes](http://angelmmiguel.github.io/opalbox-jquery#themes)
+
 ## Create a theme
 
 First of all, I recommend you to read [Develop section](#develop). To create theme, create a file on `src/sass/themes` with name `opalbox.your_theme.scss`. Insert all styles inside of a global class. The name of the class will be the string of `theme` option (see [options](#options)). For example, for `light` theme:
