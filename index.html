@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Opalbox-jquery by Angelmmiguel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Opalbox-jquery</h1>
+      <h2 class="project-tagline">A box to compile and run Ruby code on your website</h2>
+      <a href="https://github.com/Angelmmiguel/opalbox-jquery" class="btn">View on GitHub</a>
+      <a href="https://github.com/Angelmmiguel/opalbox-jquery/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/Angelmmiguel/opalbox-jquery/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="opalbox-jquery" class="anchor" href="#opalbox-jquery" aria-hidden="true"><span class="octicon octicon-link"></span></a>OpalBox-JQuery</h1>
+
+<p>A box to compile and run Ruby code on your website. This plugin uses <a href="http://opalrb.org/">OpalRB libraries</a>.</p>
+
+<h1>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h1>
+
+<p>Add the <code>dist</code> files to your project. You will need <code>js/opalbox.jquery.min.js</code>, <code>css/opalbox.min.css</code> and a theme, for example <code>css/themes/opalbox.light.min.css</code>. You can add all themes adding <code>css/themes/all_themes.min.css</code> file.</p>
+
+<p>Now, link it into your website. In <code>&lt;head&gt;</code> tag:</p>
+
+<div class="highlight highlight-HTML"><pre><span class="pl-c">&lt;!-- Styles --&gt;</span> 
+&lt;<span class="pl-ent">link</span> <span class="pl-e">rel</span>=<span class="pl-s"><span class="pl-pds">"</span>stylesheet<span class="pl-pds">"</span></span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>text/css<span class="pl-pds">"</span></span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>&lt;route to opalbox.min.css&gt;<span class="pl-pds">"</span></span> /&gt;
+&lt;<span class="pl-ent">link</span> <span class="pl-e">rel</span>=<span class="pl-s"><span class="pl-pds">"</span>stylesheet<span class="pl-pds">"</span></span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>text/css<span class="pl-pds">"</span></span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>&lt;route to theme&gt;<span class="pl-pds">"</span></span> /&gt;</pre></div>
+
+<p>Javascript files can be defined on <code>&lt;head&gt;</code> tag or at bottom of your website.</p>
+
+<div class="highlight highlight-HTML"><pre><span class="pl-c">&lt;!-- JS Dependencies (You can use CDN or local files) --&gt;</span> 
+&lt;<span class="pl-ent">script</span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>text/javascript<span class="pl-pds">"</span></span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>http://cdn.opalrb.org/opal/current/opal.min.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;
+&lt;<span class="pl-ent">script</span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>text/javascript<span class="pl-pds">"</span></span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>https://code.jquery.com/jquery-1.11.3.min.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;
+<span class="pl-c">&lt;!-- JS File --&gt;</span> 
+<span class="pl-s1">&lt;<span class="pl-ent">script</span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>text/javascript<span class="pl-pds">"</span></span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>&lt;route to opalbox.jquery.min.js&gt;<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</span></pre></div>
+
+<h1>
+<a id="use" class="anchor" href="#use" aria-hidden="true"><span class="octicon octicon-link"></span></a>Use</h1>
+
+<p>To create OpalBoxes, define an HTML element. Predefined ruby code can be inside of this tags:</p>
+
+<div class="highlight highlight-HTML"><pre>&lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>ruby-code<span class="pl-pds">"</span></span>&gt;
+    return 1
+&lt;/<span class="pl-ent">div</span>&gt;</pre></div>
+
+<p>Next call to opalBox in a script:</p>
+
+<div class="highlight highlight-javascript"><pre>$(<span class="pl-c1">document</span>).ready(<span class="pl-k">function</span>(){
+    $(<span class="pl-s"><span class="pl-pds">'</span>.ruby-code<span class="pl-pds">'</span></span>).opalBox();
+});</pre></div>
+
+<p>This code create isolated opalBoxes to run your Ruby code. Here is an example of the code:</p>
+
+<div>
+</div>
+
+<h2>
+<a id="options" class="anchor" href="#options" aria-hidden="true"><span class="octicon octicon-link"></span></a>Options</h2>
+
+<p><code>opalBox()</code> function accepts an object with optios. Available options and default values are:</p>
+
+<div class="highlight highlight-javascript"><pre><span class="pl-c">// Default options!</span>
+defaults <span class="pl-k">=</span> {
+  <span class="pl-c">// Theme of the opalBox</span>
+  theme<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>light<span class="pl-pds">'</span></span>,
+  <span class="pl-c">// Listener when compile and show the data</span>
+  onComplete<span class="pl-k">:</span> <span class="pl-c1">null</span>,
+  <span class="pl-c">// Title of the block</span>
+  title<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>Ruby code<span class="pl-pds">'</span></span>,
+  <span class="pl-c">// Placeholder when there aren't any result</span>
+  result<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>Result will appear here<span class="pl-pds">'</span></span>
+};</pre></div>
+
+<h1>
+<a id="themes" class="anchor" href="#themes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Themes</h1>
+
+<p>List of available themes:</p>
+
+<ul>
+<li>Light (by <a href="https://twitter.com/Laux_es">@laux_es</a>)</li>
+</ul>
+
+<h2>
+<a id="create-a-theme" class="anchor" href="#create-a-theme" aria-hidden="true"><span class="octicon octicon-link"></span></a>Create a theme</h2>
+
+<p>First of all, I recommend you to read <a href="#develop">Develop section</a>. To create theme, create a file on <code>src/sass/themes</code> with name <code>opalbox.your_theme.scss</code>. Insert all styles inside of a global class. The name of the class will be the string of <code>theme</code> option (see <a href="#options">options</a>). For example, for <code>light</code> theme:</p>
+
+<div class="highlight highlight-css"><pre><span class="pl-e">.opbox.light</span> {
+  <span class="pl-c">/* Your style... */</span>
+}</pre></div>
+
+<p>You can use <a href="https://github.com/Angelmmiguel/opalbox-jquery/blob/master/src/sass/themes/opalbox.light.scss">light theme</a> as example.</p>
+
+<h1>
+<a id="develop" class="anchor" href="#develop" aria-hidden="true"><span class="octicon octicon-link"></span></a>Develop</h1>
+
+<p>To work with opalBox-jquery you will need to install <a href="https://nodejs.org/">NodeJS</a>, <a href="https://www.npmjs.com/">NPM</a> and <a href="http://gulpjs.com/">Gulp</a>.</p>
+
+<p>After install base dependencies, clone the repository and run <code>npm install</code> to download development dependencies:</p>
+
+<pre><code>https://github.com/Angelmmiguel/opalbox-jquery.git
+cd opalbox-jquery
+npm install
+</code></pre>
+
+<p>All changes must be performed on <code>src/sass</code> and <code>src/js</code> folders, because <code>src/css</code> and <code>dist</code> folders are generated automatically with Gulp.</p>
+
+<p>When you finish your changes, execute <code>gulp</code> on your terminal and all minified/compiled files will be generated.</p>
+
+<h1>
+<a id="contribute" class="anchor" href="#contribute" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contribute</h1>
+
+<p>To contribute opalBox-jquery:</p>
+
+<ul>
+<li>Create an issue with the contribution: bug, enhancement (except when create a new theme)</li>
+<li>Fork the repository and make all changes you need (See <a href="#develop">develop</a>)</li>
+<li>Compile all files with <code>gulp</code>
+</li>
+<li>Create a pull request when you finish</li>
+</ul>
+
+<h1>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h1>
+
+<p>Opal is released under MIT License. See <a href="https://github.com/opal/opal#license">Opal License</a>.</p>
+
+<p>OpalBox-Jquery is released under the MIT license. Copyright <a href="https://twitter.com/Laux_es">@Laux_es</a> ;)</p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/Angelmmiguel/opalbox-jquery">Opalbox-jquery</a> is maintained by <a href="https://github.com/Angelmmiguel">Angelmmiguel</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+            <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-47913999-3");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
+
