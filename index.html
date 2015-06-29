@@ -70,7 +70,18 @@
 <p>This code create isolated opalBoxes to run your Ruby code. Try it ;)</p>
 
 <div class="ruby-code">
-return 1
+class Value
+  def initialize(val)
+    @value = val
+  end
+
+  def my_value
+    return @value
+  end
+end
+
+value = Value.new(10)
+value.my_value
 </div>
 
 <h2>
