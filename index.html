@@ -8,6 +8,14 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/opalbox.min.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/all_themes.min.css" media="screen">
+    <!-- JS Dependencies (You can use CDN or local files) --> 
+    <script type="text/javascript" src="http://cdn.opalrb.org/opal/current/opal.min.js"></script>
+    <script type="text/javascript" src="http://cdn.opalrb.org/opal/current/opal-parser.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <!-- JS File --> 
+    <script type="text/javascript" src="js/opalbox.jquery.min.js"></script>
   </head>
   <body>
     <section class="page-header">
@@ -58,9 +66,10 @@
     $(<span class="pl-s"><span class="pl-pds">'</span>.ruby-code<span class="pl-pds">'</span></span>).opalBox();
 });</pre></div>
 
-<p>This code create isolated opalBoxes to run your Ruby code. Here is an example of the code:</p>
+<p>This code create isolated opalBoxes to run your Ruby code. Try it ;)</p>
 
-<div>
+<div class="ruby-code">
+return 1
 </div>
 
 <h2>
@@ -144,16 +153,21 @@ npm install
 
     </section>
 
-            <script type="text/javascript">
-            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-          </script>
-          <script type="text/javascript">
-            try {
-              var pageTracker = _gat._getTracker("UA-47913999-3");
-            pageTracker._trackPageview();
-            } catch(err) {}
-          </script>
+    <script type="text/javascript">
+      var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+      document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+      try {
+        var pageTracker = _gat._getTracker("UA-47913999-3");
+      pageTracker._trackPageview();
+      } catch(err) {}
+    </script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('.ruby-code').opalBox();
+      });
+    </script>
 
   </body>
 </html>
