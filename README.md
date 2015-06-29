@@ -72,7 +72,7 @@ List of available themes:
 * light - by [@laux_es](https://twitter.com/Laux_es)
 * dark (aka Sublime theme) - by [@laux_es](https://twitter.com/Laux_es)
 
-Show them in action at: [Themes](http://angelmmiguel.github.io/opalbox-jquery#themes)
+Show them in action at [Themes](http://angelmmiguel.github.io/opalbox-jquery#themes)
 
 ## Create a theme
 
