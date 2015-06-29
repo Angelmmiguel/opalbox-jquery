@@ -6,16 +6,14 @@ Add the `dist` files to your project. You will need `js/opalbox.jquery.min.js`, 
 
 Now, link it into your website. In `<head>` tag:
 
-	<!-- Styles --> 
   <link rel="stylesheet" type="text/css" href="<route to opalbox.min.css>" />
 	<link rel="stylesheet" type="text/css" href="<route to theme>" />
 
 Javascript files can be defined on `<head>` tag or at bottom of your website.
 
-  <!-- JS Dependencies (You can use CDN or local files) --> 
   <script type="text/javascript" src="http://cdn.opalrb.org/opal/current/opal.min.js"></script>
   <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-  <!-- JS file -->
+
   <script type="text/javascript" src="<route to opalbox.jquery.min.js>"></script>
 
 # Use
