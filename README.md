@@ -6,29 +6,39 @@ Add the `dist` files to your project. You will need `js/opalbox.jquery.min.js`, 
 
 Now, link it into your website. In `<head>` tag:
 
-  <link rel="stylesheet" type="text/css" href="<route to opalbox.min.css>" />
-	<link rel="stylesheet" type="text/css" href="<route to theme>" />
+```HTML
+<!-- Styles --> 
+<link rel="stylesheet" type="text/css" href="<route to opalbox.min.css>" />
+<link rel="stylesheet" type="text/css" href="<route to theme>" />
+```
 
 Javascript files can be defined on `<head>` tag or at bottom of your website.
 
-  <script type="text/javascript" src="http://cdn.opalrb.org/opal/current/opal.min.js"></script>
-  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-
-  <script type="text/javascript" src="<route to opalbox.jquery.min.js>"></script>
+```HTML
+<!-- JS Dependencies (You can use CDN or local files) --> 
+<script type="text/javascript" src="http://cdn.opalrb.org/opal/current/opal.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<!-- JS File --> 
+<script type="text/javascript" src="<route to opalbox.jquery.min.js>"></script>
+```
 
 # Use
 
 To create OpalBoxes, define an HTML element. Predefined ruby code can be inside of this tags:
 
-	<div class="ruby-code">
-		return 1
-	</div>
+```HTML
+<div class="ruby-code">
+	return 1
+</div>
+```
 
 Next call to opalBox in a script:
 
-	$(document).ready(function(){
-		$('.ruby-code').opalBox();
-	});
+```javascript
+$(document).ready(function(){
+	$('.ruby-code').opalBox();
+});
+```
 
 This code create isolated opalBoxes to run your Ruby code.
 
@@ -38,19 +48,21 @@ This code create isolated opalBoxes to run your Ruby code.
 
 ## Options
 
-opalBox() function accepts an object with optios. Available options and default values are:
+`opalBox()` function accepts an object with optios. Available options and default values are:
 
-  // Default options!
-  defaults = {
-    // Theme of the opalBox
-    theme: 'light',
-    // Listener when compile and show the data
-    onComplete: null,
-    // Title of the block
-    title: 'Ruby code',
-    // Placeholder when there aren't any result
-    result: 'Result will appear here'
-  };
+```javascript
+// Default options!
+defaults = {
+  // Theme of the opalBox
+  theme: 'light',
+  // Listener when compile and show the data
+  onComplete: null,
+  // Title of the block
+  title: 'Ruby code',
+  // Placeholder when there aren't any result
+  result: 'Result will appear here'
+};
+```
 
 # Themes
 
@@ -62,11 +74,13 @@ List of available themes:
 
 First of all, I recommend you to read [Develop section](#develop). To create theme, create a file on `src/sass/themes` with name `opalbox.your_theme.scss`. Insert all styles inside of a global class. The name of the class will be the string of `theme` option (see [options](#options)). For example, for `light` theme:
 
-  .opbox.light {
-    /* Your style... */
-  }
+```css
+.opbox.light {
+  /* Your style... */
+}
+```
 
-You can use [light theme](https://github.com/Angelmmiguel/src/sass/themes/opalbox.light.scss) as example.
+You can use [light theme](https://github.com/Angelmmiguel/opalbox-jquery/blob/master/src/sass/themes/opalbox.light.scss) as example.
 
 # Develop
 
