@@ -92,7 +92,7 @@ To work with opalBox-jquery you will need to install [NodeJS](https://nodejs.org
 
 After install base dependencies, clone the repository and run `npm install` to download development dependencies:
 
-	https://github.com/Angelmmiguel/opalbox-jquery.git
+	git clone https://github.com/Angelmmiguel/opalbox-jquery.git
 	cd opalbox-jquery
 	npm install
 
