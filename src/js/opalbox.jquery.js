@@ -4,7 +4,7 @@
  * javascript.
  *
  * @author Angel M (@laux_es)
- * @version 0.0.1
+ * @version 0.0.2rc
  * @license MIT License
  */
 ;(function ($, window, document, undefined) {
@@ -50,10 +50,8 @@
     },
     // Base HTML of opalBox
     _baseHTML: function() {
-      var credit = '';
-
       return ' \
-        <div class="opbox-header">' + this.options.title + credit +'</div> \
+        <div class="opbox-header">' + this.options.title + '</div> \
         <div class="opbox-code-wrap"> \
           <textarea class="opbox-code">' + this.code + '</textarea> \
         </div> \
@@ -74,6 +72,8 @@
       this.$code = this.$element.find('.opbox-code');
       // Result
       this.$result = this.$element.find('.opbox-result');
+      // Standard console log
+      this.standardLog = window.console.log
     },
     // Bind events that trigger methods
     _bindEvents: function() {
@@ -105,10 +105,17 @@
       this.$result.html("");
 
       try {
+        var self = this;
+        // Capture puts sentences
+        window.console.log = function(msg){
+          self._showResult(msg);
+        }
         res = eval(compiled);
       } catch(compiled_error) {
         error = compiled_error.message;
       }
+      // Return to normal console
+      window.console.log = this.standardLog;
 
       if (error === undefined){
         this._showResult(res);
