@@ -1,4 +1,4 @@
-# OpalBox-JQuery
+# OpalBox-JQuery [![Build Status](https://travis-ci.org/Angelmmiguel/opalbox-jquery.svg?branch=master)](https://travis-ci.org/Angelmmiguel/opalbox-jquery)
 A box to compile and run Ruby code on your website. This plugin uses [OpalRB libraries](http://opalrb.org/).
 
 # Installation
