@@ -8,8 +8,10 @@ var gulp = require('gulp'),
     stylish = require('jshint-stylish'),
     uglify = require('gulp-uglify'),
     concat = require('gulp-concat'),
-    del = require('del');
+    del = require('del'),
+    karma = require('karma').server;
 
+// Base task to build items
 gulp.task('default', ['clean', 'lint', 'style:main'], function() {
   gulp.start('style:themes', 'script');
 });
@@ -68,5 +70,9 @@ gulp.task('lint', function() {
 
 // Perform tests. Now it's only run linter
 gulp.task('test', ['lint'], function() {
-
+  // Be sure to return the stream 
+  karma.start({
+    configFile: __dirname + '/karma.conf.js',
+    singleRun: true
+  }, function() {});
 });

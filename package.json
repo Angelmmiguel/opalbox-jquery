@@ -24,6 +24,16 @@
     "gulp-jshint": "^1.11.2",
     "gulp-rename": "^1.2.2",
     "del": "^1.2.0",
-    "jshint-stylish": "^2.0.1"
+    "jshint-stylish": "^2.0.1",
+    "phantomjs": "^1.9.17",
+    "karma-phantomjs-launcher": "^0.2.0",
+    "karma": "^0.12.37",
+    "chai": "^3.0.0",
+    "mocha": "^2.2.5",
+    "karma-mocha": "^0.2.0",
+    "karma-chai": "^0.1.0",
+    "karma-fixture": "^0.2.5",
+    "karma-html2js-preprocessor": "^0.1.0",
+    "gulp-karma": "0.0.4"
   }
 }
