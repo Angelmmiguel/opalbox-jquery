@@ -50,19 +50,19 @@
     },
     // Base HTML of opalBox
     _baseHTML: function() {
-      return ' \
-        <div class="opbox-header">' + this.options.title + '</div> \
-        <div class="opbox-code-wrap"> \
-          <textarea class="opbox-code">' + this.code + '</textarea> \
-        </div> \
-        <div class="opbox-output"> \
-          <div class="opbox-execute"> \
-            <button class="opbox-run">Run</button> \
-          </div> \
-          <div class="opbox-result"> \
-            <p class="empty">' + this.options.result + '</p> \
-          </div> \
-        </div>';
+      return '' +
+        '<div class="opbox-header">' + this.options.title + '</div>' +
+        '<div class="opbox-code-wrap">' +
+          '<textarea class="opbox-code">' + this.code + '</textarea>' +
+        '</div>' +
+        '<div class="opbox-output">' +
+          '<div class="opbox-execute">' +
+            '<button class="opbox-run">Run</button>' +
+          '</div>' +
+          '<div class="opbox-result">' +
+            '<p class="empty">' + this.options.result + '</p>' +
+          '</div>' +
+        '</div>';
     },
     // Cache DOM nodes for performance
     _buildCache: function () {

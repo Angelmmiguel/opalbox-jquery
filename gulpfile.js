@@ -12,7 +12,7 @@ var gulp = require('gulp'),
 
 gulp.task('default', ['clean', 'lint', 'style:main'], function() {
   gulp.start('style:themes', 'script');
-})
+});
 
 // Clean ALL distributed files
 gulp.task('clean', function(cb) {

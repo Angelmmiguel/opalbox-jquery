@@ -1,5 +1,4 @@
 {
   "evil" : true,
-  "jquery" : true,
-  "multistr" : true
+  "jquery" : true
 }
