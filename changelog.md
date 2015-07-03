@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [0.0.2rc] Prerelease 
 
+- Integrate with Travis and CodeClimate
 - Read console.log to capture Ruby `puts` sentences.
 
 ## [0.0.1] - 30-06-2015
