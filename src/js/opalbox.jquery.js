@@ -62,7 +62,7 @@
           <div class="opbox-result"> \
             <p class="empty">' + this.options.result + '</p> \
           </div> \
-        </div>'
+        </div>';
     },
     // Cache DOM nodes for performance
     _buildCache: function () {
@@ -73,7 +73,7 @@
       // Result
       this.$result = this.$element.find('.opbox-result');
       // Standard console log
-      this.standardLog = window.console.log
+      this.standardLog = window.console.log;
     },
     // Bind events that trigger methods
     _bindEvents: function() {
@@ -109,7 +109,7 @@
         // Capture puts sentences
         window.console.log = function(msg){
           self._showResult(msg);
-        }
+        };
         res = eval(compiled);
       } catch(compiled_error) {
         error = compiled_error.message;

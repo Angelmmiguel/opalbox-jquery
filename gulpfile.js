@@ -5,11 +5,12 @@ var gulp = require('gulp'),
     minifycss = require('gulp-minify-css'),
     rename = require('gulp-rename'),
     jshint = require('gulp-jshint'),
+    stylish = require('jshint-stylish'),
     uglify = require('gulp-uglify'),
     concat = require('gulp-concat'),
     del = require('del');
 
-gulp.task('default', ['clean', 'style:main'], function() {
+gulp.task('default', ['clean', 'lint', 'style:main'], function() {
   gulp.start('style:themes', 'script');
 })
 
@@ -56,4 +57,16 @@ gulp.task('script', function() {
     .pipe(concat('opalbox.jquery.min.js'))
     .pipe(uglify({preserveComments: 'some'}))
     .pipe(gulp.dest('dist/js'));
+});
+
+// Check Javascript style
+gulp.task('lint', function() {
+  return gulp.src('./src/js/*.js')
+    .pipe(jshint('.jshintrc'))
+    .pipe(jshint.reporter(stylish));
+});
+
+// Perform tests. Now it's only run linter
+gulp.task('test', ['lint'], function() {
+
 });
