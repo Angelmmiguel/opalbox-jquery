@@ -1,14 +1,14 @@
 /*
  * Test the generation and run of ruby code in a HTML
  */
-describe("A HTML with an OpalBox", function() {
+describe("A HTML with one OpalBox", function() {
   // Prepare fixtures
   before(function(){
     fixture.setBase('test/fixtures')
   });
 
   beforeEach(function() {
-    this.result = fixture.load('one_opalbox_fix.html');
+    this.result = fixture.load('one_box_fix.html');
   });
 
   afterEach(function() {
@@ -28,6 +28,7 @@ describe("A HTML with an OpalBox", function() {
   it('should run the Ruby code and get the result', function() {
     var rubyCode = $('.ruby-code');
     rubyCode.find('.opbox-run').click();
-    expect(rubyCode.find('.opbox-result').html()).to.equal('<p>1</p>');
+    expect(rubyCode.find('.opbox-result').html().replace(/(\r\n|\n|\r|^\s+)/gm,''))
+      .to.equal('<p>Hi Hacker</p><p>1</p>');
   });
 });
