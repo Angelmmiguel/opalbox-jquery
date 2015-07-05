@@ -12,7 +12,7 @@ module.exports = function(config) {
       'http://cdn.opalrb.org/opal/current/opal.min.js',
       'http://cdn.opalrb.org/opal/current/opal-parser.min.js',
       'http://code.jquery.com/jquery-1.11.3.min.js',
-      'src/js/*.js',
+      'dist/js/*.js',
       'test/**/*.js',
       // Fixtures
       { 

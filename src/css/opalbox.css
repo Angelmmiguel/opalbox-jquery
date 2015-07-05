@@ -49,3 +49,6 @@
 .opbox .opbox-output .opbox-result p {
   margin: 5px 0;
 }
+.opbox .opbox-output .opbox-result p.opbox-error {
+  color: red;
+}

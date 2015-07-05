@@ -61,6 +61,10 @@
       p {
         margin: 5px 0;
 
+        &.opbox-error {
+          color: red;
+        }
+
         &.empty { }
       }
     }

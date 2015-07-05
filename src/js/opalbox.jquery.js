@@ -129,7 +129,7 @@
     // Show errors and results
     _showResult: function(msg, err){
       if (err === true){
-        this.$result.append("<p style='color: red'>" + msg + "</p>");
+        this.$result.append("<p class='opbox-error'>" + msg + "</p>");
       } else {
         this.$result.append("<p>" + msg + "</p>");
       }
