@@ -9,8 +9,8 @@ module.exports = function(config) {
     frameworks: ['mocha', 'chai', 'fixture'],
     // list of files / patterns to load in the browser
     files: [
-      'http://cdn.opalrb.org/opal/current/opal.min.js',
-      'http://cdn.opalrb.org/opal/current/opal-parser.min.js',
+      'http://cdn.opalrb.org/opal/0.7.1/opal.min.js',
+      'http://cdn.opalrb.org/opal/0.7.1/opal-parser.min.js',
       'http://code.jquery.com/jquery-1.11.3.min.js',
       'dist/js/*.js',
       'test/**/*.js',
