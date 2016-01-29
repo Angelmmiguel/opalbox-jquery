@@ -31,6 +31,7 @@
   float: left;
   padding: 10px;
   text-align: center;
+  position: relative;
 }
 .opbox .opbox-output .opbox-execute .opbox-run {
   border: none;
@@ -40,6 +41,42 @@
   padding: 5px 0;
   border-radius: 5px;
   cursor: pointer;
+}
+.opbox .opbox-output .opbox-execute .opbox-loader {
+  display: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  opacity: 0.6;
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  margin-left: -8px;
+  -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+  animation: sk-bounce 2.0s infinite ease-in-out;
+}
+.opbox .opbox-output .opbox-execute .delayed {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+@-webkit-keyframes sk-bounce {
+  0%, 100% {
+    -webkit-transform: scale(0);
+  }
+  50% {
+    -webkit-transform: scale(1);
+  }
+}
+@keyframes sk-bounce {
+  0%, 100% {
+    transform: scale(0);
+    -webkit-transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+  }
 }
 .opbox .opbox-output .opbox-result {
   padding: 7px 15px;

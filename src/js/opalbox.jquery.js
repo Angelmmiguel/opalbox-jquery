@@ -58,6 +58,8 @@
         '<div class="opbox-output">' +
           '<div class="opbox-execute">' +
             '<button class="opbox-run">Run</button>' +
+            '<div class="opbox-loader"></div>' +
+            '<div class="opbox-loader delayed"></div>' +
           '</div>' +
           '<div class="opbox-result">' +
             '<p class="empty">' + this.options.result + '</p>' +
@@ -68,6 +70,8 @@
     _buildCache: function () {
       // Execute button
       this.$execute = this.$element.find('.opbox-run');
+      // Loader
+      this.$loader = this.$element.find('.opbox-loader');
       // Code area
       this.$code = this.$element.find('.opbox-code');
       // Result
@@ -104,15 +108,18 @@
     },
     // Execute the code and show the output
     execute: function() {
+      // Show button as "Running"
+      this._setButtonLoading();
+
+      // Initialize
       var compiled = this.compile(),
           error,
           res;
+
+      // Show a loading text
+      this.$result.html("<p>...</p>");
+
       // Modify the log to capture "puts" sentences
-      // ...
-
-      // Clear result form
-      this.$result.html("");
-
       try {
         var self = this;
         // Capture puts sentences
@@ -126,6 +133,9 @@
       // Return to normal console
       window.console.log = this.standardLog;
 
+      // Clean output
+      this.$result.html("");
+      // Show result
       if (error === undefined){
         this._showResult(res);
       } else {
@@ -133,7 +143,18 @@
       }
 
       // On complete
+      this._setButtonRun();
       this.callback();
+    },
+    // Set the button as "Running"
+    _setButtonLoading: function() {
+      this.$execute.html('&nbsp;');
+      this.$loader.show();
+    },
+    // Set the button as "Normal"
+    _setButtonRun: function() {
+      this.$loader.hide();
+      this.$execute.html('Run');
     },
     // Show errors and results
     _showResult: function(msg, err){
