@@ -1,6 +1,6 @@
 {
   "name": "OpalBox-JQuery",
-  "version": "0.0.2rc",
+  "version": "0.1.0",
   "description": "A box to compile and run Ruby code on your website",
   "repository": {
     "type": "git",

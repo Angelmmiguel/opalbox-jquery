@@ -7,7 +7,7 @@ Add the `dist` files to your project. You will need `js/opalbox.jquery.min.js`, 
 Now, link it into your website. In `<head>` tag:
 
 ```HTML
-<!-- Styles --> 
+<!-- Styles -->
 <link rel="stylesheet" type="text/css" href="<route to opalbox.min.css>" />
 <link rel="stylesheet" type="text/css" href="<route to theme or all themes>" />
 ```
@@ -15,11 +15,11 @@ Now, link it into your website. In `<head>` tag:
 Javascript files can be defined on `<head>` tag or at bottom of your website.
 
 ```HTML
-<!-- JS Dependencies (You can use CDN or local files) --> 
+<!-- JS Dependencies (You can use CDN or local files) -->
 <script type="text/javascript" src="http://cdn.opalrb.org/opal/0.7.1/opal.min.js"></script>
 <script type="text/javascript" src="http://cdn.opalrb.org/opal/0.7.1/opal-parser.min.js"></script>
 <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-<!-- JS File --> 
+<!-- JS File -->
 <script type="text/javascript" src="<route to opalbox.jquery.min.js>"></script>
 ```
 
@@ -61,7 +61,9 @@ defaults = {
   // Title of the block
   title: 'Ruby code',
   // Placeholder when there aren't any result
-  result: 'Result will appear here'
+  result: 'Result will appear here',
+  // Auto-adjust height of the textarea to the code
+  autoadjust: false
 };
 ```
 
