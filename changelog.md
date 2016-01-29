@@ -4,8 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [0.1.0] - 29-01-2016
 
-- Added `autoadjust` option to set the height of text area based on content.
-- Show a loader when execute Ruby code.
+- Added `autoadjust` option to set the height of text area based on content [#1](https://github.com/Angelmmiguel/opalbox-jquery/issues/1)
+- Show a loader when executing Ruby code [#2](https://github.com/Angelmmiguel/opalbox-jquery/issues/2)
 
 ## [0.0.2rc] Prerelease
 
