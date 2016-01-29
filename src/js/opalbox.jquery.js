@@ -16,12 +16,12 @@
     this.element = element;
     this._name = pluginName;
     this._defaults = $.fn.opalBox.defaults;
-    
+
     // Get options
     this.options = $.extend( {}, this._defaults, options );
 
     // Init the plugin
-    this.init(); 
+    this.init();
   }
 
   // Avoid Plugin.prototype conflicts
@@ -82,6 +82,15 @@
       self.$execute.on('click' + '.' + self._name, function() {
         self.execute.call(self);
       });
+      // Adjust size of the box
+      if (self.options.autoadjust) {
+        self.$code.on('input', function() {
+          // Force the height of the box
+          $(this).height( this.scrollHeight - 25 );
+        });
+        // Call event to Adjust
+        self.$code.trigger('input');
+      }
     },
 
     // Unbind events that trigger methods
@@ -163,7 +172,9 @@
     // Title of the block
     title: 'Ruby code',
     // Placeholder when there aren't any result
-    result: 'Result will appear here'
+    result: 'Result will appear here',
+    // Autoadjust height of the textarea to the code
+    autoadjust: false
   };
 
 })( jQuery, window, document );

@@ -11,7 +11,7 @@
   border-radius: 6px 6px 0 0;
 }
 .opbox .opbox-code-wrap {
-  height: 120px;
+  min-height: 120px;
 }
 .opbox .opbox-code {
   border: none;

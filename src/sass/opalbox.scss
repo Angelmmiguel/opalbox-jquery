@@ -7,7 +7,7 @@
 .opbox {
   border: 1px solid #e1e1e1;
   border-radius: 7px;
-  
+
   // Header
   .opbox-header {
     padding: 10px 15px;
@@ -16,7 +16,7 @@
 
   // Code
   .opbox-code-wrap {
-    height: 120px;
+    min-height: 120px;
   }
 
   .opbox-code {
@@ -40,7 +40,7 @@
       float: left;
       padding: 10px;
       text-align: center;
-    
+
       .opbox-run {
         border: none;
         width: 70px;
@@ -57,7 +57,7 @@
       padding: 7px 15px;
       margin-left: 80px;
       min-height: 28px;
-      
+
       p {
         margin: 5px 0;
 
