@@ -49,7 +49,7 @@ This code create isolated opalBoxes to run your Ruby code.
 
 ## Options
 
-`opalBox()` function accepts an object with optios. Available options and default values are:
+`opalBox()` function accepts an object with options. Available options and default values are:
 
 ```javascript
 // Default options!
