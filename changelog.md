@@ -2,6 +2,11 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.0.0] - 05-02-2016
+
+- Update Opal libraries to the latest stable (0.8.1) [#3](https://github.com/Angelmmiguel/opalbox-jquery/issues/3)
+- Fixed an error that `puts` sentences don't produce any output
+
 ## [0.1.0] - 29-01-2016
 
 - Added `autoadjust` option to set the height of text area based on content [#1](https://github.com/Angelmmiguel/opalbox-jquery/issues/1)

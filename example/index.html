@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Opalbox-jquery by Angelmmiguel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../dist/css/opalbox.min.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="../dist/css/all_themes.min.css" media="screen">
+    <!-- JS Dependencies (You can use CDN or local files) -->
+    <script type="text/javascript" src="http://cdn.opalrb.org/opal/0.8.1/opal.min.js"></script>
+    <script type="text/javascript" src="http://cdn.opalrb.org/opal/0.8.1/opal-parser.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <!-- JS File -->
+    <script type="text/javascript" src="../dist/js/opalbox.jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="ruby-code">
+      class Value
+        def initialize(val)
+          @value = val
+        end
+
+        def my_value
+          return @value
+        end
+      end
+
+      value = Value.new(10)
+      value.my_value
+    </div>
+    <script>
+      $(document).ready(function(){
+        $('.ruby-code').opalBox();
+      });
+    </script>
+  </body>
+</html>
